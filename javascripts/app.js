@@ -18,7 +18,11 @@
     $.fn.foundationClearing         ? $doc.foundationClearing() : null;
 
     $.fn.placeholder                ? $('input, textarea').placeholder() : null;
+
+    $('.untouchee').unslider();
+    //$('.untouchee').height() = $(window).innerHeight();
   });
+
 
   // UNCOMMENT THE LINE YOU WANT BELOW IF YOU WANT IE8 SUPPORT AND ARE USING .block-grids
   // $('.block-grid.two-up>li:nth-child(2n+1)').css({clear: 'both'});
@@ -34,5 +38,7 @@
       }, 0);
     });
   }
+
+
 
 })(jQuery, this);
