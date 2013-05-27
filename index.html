@@ -11,7 +11,7 @@
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
 
-  <title>Welcome to Foundation</title>
+  <title>Untouchee - Interactive touchless interface</title>
 
   <!-- Included CSS Files (Uncompressed) -->
   <!--
@@ -33,28 +33,52 @@
 
 <div class="untouchee">
   <ul>
-    <li id="screen1">
+    <li id="screen1" class="clearfix">
+      <div class="logo">
+        <img src="images/logo.png" alt="" />
+      </div>
       <div class="row">
-        <div class="four columns logo_wrap">
-          <div class="logo">
+        <div class="eight offset-by-three columns">
+          <div class="whymca">
+            <img src="images/whymca.png" alt="whymca" />
+            <h3>scorri l’agenda di</h3>
+            <h2>Hack Reality 2</h2>
           </div>
         </div>
-        <div class="four offset-by-three columns">
-          bbbb
-        </div>
         <div class="one ending columns">
-          ccc
+          <span class="icon-arrow-right"></span>
         </div>
       </div>
     </li>
-    <li id="screen2">
-      <div class="row">
-        <div class="twelve columns">
-          a
+    <li id="screen2" class="clearfix">
+      <div class="left">
+        <span class="icon-arrow-right"></span>
+      </div>
+      <div class="row hackaton">
+        <div class="three offset-by-one columns" data-start="1372143600000" data-end="1372145400000">
+          <h4>09:00/09:30</h4>
+          <h2>Presentazioni</h2>
+          <h3>tecnologie, API e tech provider</h3>
+        </div>
+        <div class="three offset-by-one columns" data-start="1372145400000" data-end="1372176000000">
+          <h4>09:30/18:00</h4>
+          <h2>hackaton</h2>
+          <h3>lovely nerds having fun</h3>
+        </div>
+        <div class="four columns" data-start="1372176000000" data-end="1372179600000">
+          <h4>18:00/19:00</h4>
+          <h2>premiazione</h2>
+          <h3>presentazione progetti</h3>
         </div>
       </div>
+      <div class="right">
+        <span class="icon-arrow-right"></span>
+      </div>
+      <div class="time">
+        sono le <span></span>
+      </div>
     </li>
-    <li>
+    <li id="screen3" class="clearfix">
       <div class="row">
         <div class="twelve columns">
           a
@@ -110,13 +134,6 @@
   <script src="javascripts/unslider.min.js"></script>
   <!-- Initialize JS Plugins -->
   <script src="javascripts/app.js"></script>
-
-
-    <script>
-    $(window).load(function(){
-      $("#featured").orbit();
-    });
-    </script>
 
 </body>
 </html>

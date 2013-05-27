@@ -39,6 +39,35 @@
     });
   }
 
+  $('.hackaton div').each(function() {
+    calculateHour($(this).data('start'), $(this).data('end'), $(this));
+  });
+
+  setTimeout(function () {
+    var currentdate = new Date().getTime();
+    $('.time span').html(currentdate);
+    $('.hackaton div').each(function() {
+      calculateHour($(this).data('start'), $(this).data('end'), $(this));
+    });
+  }, 30000);
 
 
 })(jQuery, this);
+
+function calculateHour(start, end, el) {
+  // calculate timestamp from webconsole (new Date(2013, 5, 25, 19, 00, 0, 0)).getTime()
+  // alert(start);
+  // alert(end);
+  var currentdate = new Date().getTime();
+  var time = new Date();
+  var hour = time.getHours();
+  var min = time.getMinutes();
+  $('.time span').html(hour + ':' + min);
+  if(currentdate > start && currentdate < end) {
+    el.addClass('now');
+  } else if (currentdate > start && currentdate > end) {
+    el.addClass('past');
+  } else if (currentdate < start && currentdate < end) {
+    el.addClass('yet');
+  }
+}
